@@ -23,7 +23,7 @@ var mailOptionsTokenInvalid = {
   text: 'Your token has expired'
 };
 
-const foundPlaces = [];
+let foundPlaces = [];
 
 function run() {
   console.log('calling centers api ...')
