@@ -85,4 +85,5 @@ function run() {
   });
 }
 
+run();
 const intervalID = setInterval(run, 60 * 1000);
