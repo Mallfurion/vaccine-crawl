@@ -16,6 +16,13 @@ var mailOptions = {
   text: ''
 };
 
+var mailOptionsTokenInvalid = {
+  from: 'florin.scouts@gmail.com',
+  to: 'florin.scouts@gmail.com',
+  subject: 'RO-VACCINATE Token Expired',
+  text: 'Your token has expired'
+};
+
 const foundPlaces = [];
 
 function run() {
@@ -41,6 +48,13 @@ function run() {
     "mode": "cors"
   }).then(res => res.json(), err => {
     console.log(err);
+    mail.sendMail(mailOptionsTokenInvalid, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('email sent: ' + info.response);
+      }
+    });
     clearInterval(intervalID);
   })
   .then(response => {
@@ -49,7 +63,7 @@ function run() {
         response.content.forEach(center => {
           if ('availableSlots' in center && center.availableSlots !== 0) {
             console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} ${center.availableSlots === 1 ? 'loc' : 'locuri'}`);
-            foundPlaces.push(center.name);
+            foundPlaces.push(`${center.name} | ${center.availableSlots} ${center.availableSlots === 1 ? 'loc' : 'locuri'}`);
             foundPlace = true;
           }
         });
@@ -64,7 +78,8 @@ function run() {
               console.log('email sent: ' + info.response);
             }
           });
-          clearInterval(intervalID);
+          // do not clear interval if place was found
+          // clearInterval(intervalID);
         }
       }
   });
