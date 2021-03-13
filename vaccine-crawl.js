@@ -81,6 +81,7 @@ function run() {
           // do not clear interval if place was found
           // clearInterval(intervalID);
         }
+        foundPlaces = [];
       }
   });
 }
