@@ -61,7 +61,7 @@ function run() {
       let foundPlace = false;
       if ('content' in response && response.content.length) {
         response.content.forEach(center => {
-          if ('availableSlots' in center && center.availableSlots >= 2) {
+          if ('availableSlots' in center && center.availableSlots >= 4) {
             console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} 'locuri'`);
             foundPlaces.push(`${center.name} | ${center.availableSlots} 'locuri'`);
             foundPlace = true;
@@ -87,4 +87,4 @@ function run() {
 }
 
 run();
-const intervalID = setInterval(run, 20 * 1000);
+const intervalID = setInterval(run, 10 * 1000);
