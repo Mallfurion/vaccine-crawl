@@ -87,4 +87,4 @@ function run() {
 }
 
 run();
-const intervalID = setInterval(run, 60 * 1000);
+const intervalID = setInterval(run, 20 * 1000);
