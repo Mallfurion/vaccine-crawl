@@ -62,8 +62,8 @@ function run() {
       if ('content' in response && response.content.length) {
         response.content.forEach(center => {
           if ('availableSlots' in center && center.availableSlots >= 2) {
-            console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} 'locuri'}`);
-            foundPlaces.push(`${center.name} | ${center.availableSlots} 'locuri'}`);
+            console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} 'locuri'`);
+            foundPlaces.push(`${center.name} | ${center.availableSlots} 'locuri'`);
             foundPlace = true;
           }
         });
