@@ -43,7 +43,7 @@ function run() {
     },
     "referrer": "https://programare.vaccinare-covid.gov.ro/",
     "referrerPolicy": "strict-origin-when-cross-origin",
-    "body": "{\"countyID\":12,\"localityID\":null,\"name\":null,\"identificationCode\":\"1930309020100\",\"masterPersonnelCategoryID\":-4,\"personnelCategoryID\":32,\"recipientID\":5459333}",
+    "body": "{\"countyID\":12,\"localityID\":4273,\"name\":null,\"identificationCode\":\"1930309020100\",\"masterPersonnelCategoryID\":-4,\"personnelCategoryID\":32,\"recipientID\":5459333}",
     "method": "POST",
     "mode": "cors"
   }).then(res => res.json(), err => {
@@ -61,9 +61,9 @@ function run() {
       let foundPlace = false;
       if ('content' in response && response.content.length) {
         response.content.forEach(center => {
-          if ('availableSlots' in center && center.availableSlots !== 0) {
-            console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} ${center.availableSlots === 1 ? 'loc' : 'locuri'}`);
-            foundPlaces.push(`${center.name} | ${center.availableSlots} ${center.availableSlots === 1 ? 'loc' : 'locuri'}`);
+          if ('availableSlots' in center && center.availableSlots >= 2) {
+            console.log(`FOUND PLACE ${center.name} | ${center.availableSlots} 'locuri'}`);
+            foundPlaces.push(`${center.name} | ${center.availableSlots} 'locuri'}`);
             foundPlace = true;
           }
         });
