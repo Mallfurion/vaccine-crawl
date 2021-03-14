@@ -39,7 +39,7 @@ function run() {
       "sec-fetch-dest": "empty",
       "sec-fetch-mode": "cors",
       "sec-fetch-site": "same-origin",
-      "cookie": "__utma=166663336.1591922312.1608886086.1608886086.1608886086.1; __utmz=166663336.1608886086.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); _ga_M62YWKC42M=GS1.1.1614342354.2.1.1614342821.0; _gid=GA1.2.1844811548.1615577577; _gat_gtag_UA_115306741_15=1; SESSION=YWM1ZTVlNzktZmFhNy00OTQxLTk5ZTgtZDljMWVjODIzYjA0; _ga_JZ40WVXFJF=GS1.1.1615640238.9.1.1615640250.0; _ga=GA1.2.1591922312.1608886086"
+      "cookie": "__utma=166663336.1591922312.1608886086.1608886086.1608886086.1; __utmz=166663336.1608886086.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); _ga_M62YWKC42M=GS1.1.1614342354.2.1.1614342821.0; _gid=GA1.2.1844811548.1615577577; SESSION=MmIwZTYyZDItZTQ1MS00ZTE2LTllZGItYTEyNDM2ZDI1N2Vm; _ga=GA1.2.1591922312.1608886086; _gat_gtag_UA_115306741_15=1; _ga_JZ40WVXFJF=GS1.1.1615702499.11.1.1615702509.0"
     },
     "referrer": "https://programare.vaccinare-covid.gov.ro/",
     "referrerPolicy": "strict-origin-when-cross-origin",
